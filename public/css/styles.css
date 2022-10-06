@@ -1,0 +1,133 @@
+@font-face {
+    font-family: "astroFont";
+    src: url("../fonts/Astronaut_PersonalUse.otf");
+}
+
+body {
+    position: relative;
+    background-color: #000;
+    min-height: 45rem;
+    padding-bottom: 80px;
+}
+
+.bod {
+    background-color: #000;
+}
+
+html {height:100%}
+
+/* Title */
+.banner {
+    color: rgb(255, 255, 255);
+    font-family: "astroFont";
+    text-align: center;
+}
+
+.mainForm {
+    color: rgb(255, 255, 255);
+    border-style: solid;
+    border-color: #fff;
+    border-radius: 10px;
+    width: 35%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.centerInputFile {
+    margin: 0 auto;
+    width: 50%;
+}
+
+.suitsMainDisplay {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    color: rgb(255, 255, 255);
+    border-style: solid;
+    border-color: #fff;
+    border-radius: 10px;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.suitDisplay {
+    width: 20%;
+    padding-bottom: 20px;
+}
+
+
+/* NAVIGATION */
+
+.navbar-bg {
+    background: url('../images/space-nav.jpg');
+    background-size: 80%;
+}
+
+.dropdown-menu, .dropdown-menu.show {
+    right: 0;
+}
+
+.space-brand {
+    color: #fff;
+    font-weight: bold;
+}
+
+.nav-profile-img {
+    width: 50px;
+    border: 1px solid #fff;
+}
+
+/* ADVERTISEMENT */
+
+.ad-space {
+    background: #fff;
+    border-radius: 5px;
+    border-top: 5px solid green;
+}
+
+.advertisement-img {
+    width: 150px;
+    height: auto;
+    border: 2px solid #efefee;
+    border-radius: 5px;
+}
+
+.advertisement-text {
+    font-weight: bold;
+}
+
+.quote-space {
+    background: #fff;
+    margin-top: 30px;
+    border-radius: 5px;
+    border-top: 5px solid hotpink;
+}
+
+
+/* PROFILE */
+
+.profile-img {
+    width: 150px;
+    height: auto;
+    border: 2px solid #fff;
+}
+
+.profile-name {
+    font-size: 1.5em;
+}
+
+
+/* FOOTER */
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px; /* Set the fixed height of the footer here */
+  line-height: 60px; /* Vertically center the text there */
+  background-color: rgb(0, 0, 0);
+  margin-top: 10px;
+}

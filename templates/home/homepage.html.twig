@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="bod">
+<h1 class="banner">👩‍🚀 Add your suit to the collection 🧑‍🚀</h1>
+
+<div class="mainForm">
+{{ form_start(form) }}
+    <div class="centerInputFile">
+    {{ form_row(form.suitName) }}
+    {{ form_row(form.suitDescription) }}
+    {{ form_errors(form) }}
+    {{ form_row(form.suit) }}
+    </div>
+    {{ form_help(form) }}
+{{ form_end(form) }}
+</div>
+<br/><br/>
+<h1 class="banner">🚀 Hottest suits in the Astrolock 🚀</h1>
+<div class="suitsMainDisplay">
+    {% for suit in allSuits %}
+    <div class="suitDisplay">
+        <p>{{ suit.suitName }}</p>
+        <img src="suits_thumbnails/{{ suit.suitFilename }}">
+        <p>{{ suit.suitDescription }}</p>
+        <a href="{{ path('suit_delete', { origin: orig, id: suit.id}) }}" class="btn btn-danger" role="button">Delete suit</a>
+    </div>
+    {% endfor %}
+</div>
+
+</div>
+{% endblock %}
