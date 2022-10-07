@@ -28,7 +28,6 @@ class SuitType extends AbstractType
                         'maxSize' => '1024k',
                         'mimeTypes' => [
                             'image/png',
-                            'image/jpeg',
                         ],
                         'mimeTypesMessage' => 'Please upload a valid image.',
                     ])
