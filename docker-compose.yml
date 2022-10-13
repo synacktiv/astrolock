@@ -1,7 +1,13 @@
 version: '3'
 
 services:
-###> doctrine/doctrine-bundle ###
+  astrolock:
+    container_name: astrolock
+    build: .
+    ports:
+      - 8080:8000
+    depends_on:
+      - database
   database:
     image: postgres:${POSTGRES_VERSION:-14}-alpine
     environment:
@@ -11,11 +17,6 @@ services:
       POSTGRES_USER: ${POSTGRES_USER:-app}
     volumes:
       - db-data:/var/lib/postgresql/data:rw
-      # You may use a bind-mounted host directory instead, so that it is harder to accidentally remove the volume and lose all your data!
-      # - ./docker/db/data:/var/lib/postgresql/data:rw
-###< doctrine/doctrine-bundle ###
 
 volumes:
-###> doctrine/doctrine-bundle ###
   db-data:
-###< doctrine/doctrine-bundle ###
