@@ -226,7 +226,7 @@ class HomeController extends AbstractController
         }
 
         
-        unlink($this->getParameter('suits_directory')."/".$to_delete->getSuitFilename());
+        unlink($this->getParameter('thumbnails_directory')."/".$to_delete->getSuitFilename());
         $entityManager->remove($to_delete);
         $entityManager->flush();
         if ($origin == "first-part") { $redirect = "app_first_part"; };
